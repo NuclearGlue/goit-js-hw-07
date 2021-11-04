@@ -1,2 +1,3 @@
-# goit-markup-hw-5
-Homework №5 by Alexandr Sorokin
+# goit-js-hw-6
+
+Homework №6 by Alexandr Sorokin
