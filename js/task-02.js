@@ -6,8 +6,10 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const line = document.body.ul.createElement("li");
-for (const ing of ingredients) {
-  line = ing;
-  ul.append(line);
-}
+const ingrList = document.querySelector('#ingredients');
+
+ingredients.forEach(el => {
+ const ingrLine =  document.createElement('li');
+  ingrLine.textContent = el;
+   ingrList.append(ingrLine);
+})
