@@ -1,4 +1,5 @@
 const inputForm = document.querySelector('.login-form');
+console.log(inputForm.elements);
 
 
 
@@ -12,7 +13,7 @@ function checkForm(event) {
     } = event.currentTarget; 
     
 
-    if (email.value === "" || password.value === "" || password.value.trim() === "") {
+    if (email.value === "" || password.value === "") {
         return alert("Somethin wrong, perhaps one of ht field empty!")
     }
     else{
