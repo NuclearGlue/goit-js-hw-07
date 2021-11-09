@@ -12,15 +12,18 @@ function checkForm(event) {
         elements: { email, password }
     } = event.currentTarget; 
     
-
+    const formList = {};
+    
     if (email.value === "" || password.value === "") {
         return alert("Somethin wrong, perhaps one of ht field empty!")
     }
     else{
-        const formList = { email: email.value, password: password.value };
-        console.log(formList);
-}
+         formList[`${email.name}`]= `${ email.value }`;
+       formList[`${password.name}`] =`${password.value }`;
     
+    
+    };
+        console.log(formList);
     event.currentTarget.reset();
     
 
