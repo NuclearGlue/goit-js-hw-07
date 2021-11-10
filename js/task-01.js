@@ -3,9 +3,9 @@ const categoriesQuantity = `Number of categories: ${categoriesElem.length}`
 console.log(categoriesQuantity);
 
 
-const itemQuantity = [];
+let itemQuantity = '';
 categoriesElem.forEach(el => {
-    itemQuantity.push({Category:  el.querySelector('h2').textContent, Elements: el.querySelectorAll('ul>li').length});
+     itemQuantity += (`Category:  ${el.querySelector('h2').textContent}, \n Elements: ${el.querySelectorAll('ul>li').length} \n \n`);
     
 })
 console.log(itemQuantity);

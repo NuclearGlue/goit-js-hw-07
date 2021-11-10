@@ -7,10 +7,10 @@ const decreaseButton = document.querySelector('button[data-action="decrement"]')
 increaseButton.addEventListener("click", () => {
     
     counterValue += 1;
-     valueField.innerHTML = counterValue;
+     valueField.textContent = counterValue;
 });
 decreaseButton.addEventListener("click", () => {
    
     counterValue -= 1;
-    valueField.innerHTML = counterValue;
+    valueField.textContent = counterValue;
 });
