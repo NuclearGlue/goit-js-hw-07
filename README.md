@@ -1,3 +1,3 @@
-# goit-js-hw-6
+# goit-js-hw-7
 
-Homework №6 by Alexandr Sorokin
+Homework №7 by Alexandr Sorokin
