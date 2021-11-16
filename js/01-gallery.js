@@ -20,30 +20,24 @@ function bigPicture(event) {
     if (event.target.nodeName !== 'IMG') {
         return;
     }
-    const imageUrl = event.target.dataset.source;
+   
 const instance = basicLightbox.create(`
-    <img src="assets/images/image.png" width="800" height="600">
+    <img src = "${event.target.dataset.source}">
 `)
-  
-    lightbox.classList.add('is-open');
-    lightboxImage.src = imageUrl;
-    lightboxImage.alt = event.target.alt;
-     
-window.addEventListener('keydown', keyPress);
+    instance.show();
+
+ window.addEventListener('keydown', keyPress);
+
+    function keyPress(event) {
+    if (event.code === 'Escape') {
+        instance.close();
+        window.removeEventListener('keydown', keyPress);
+    }
+    }
+    
 }
 
-closeButton.addEventListener('click', modalClose);
 
-function modalClose(event) {
-    lightbox.classList.remove('is-open');
-
-    lightboxImage.src = '';
-    lightboxImage.alt = '';
-
-    window.removeEventListener('keydown', keyPress);
-}
-
-overlayBox.addEventListener('click', modalClose);
 
 
 
